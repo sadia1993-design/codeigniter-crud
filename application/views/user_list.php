@@ -3,22 +3,25 @@
 
     <?php echo form_open_multipart('User_list/saveUser'); ?>
 
-    <?php 
-        if(isset($user_data_edit)){
-            echo form_hidden('id', @$user_data_edit->id);
-        }
+    <?php
+    if (isset($user_data_edit)) {
+        echo form_hidden('id', @$user_data_edit->id);
+    }
     ?>
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username" name="username" value="<?php echo @$user_data_edit->username; ?>">
+        <?php echo form_error('username'); ?>
     </div>
     <div class="form-group">
         <label for="email">Email address:</label>
         <input type="email" class="form-control" id="email" name="email" value="<?php echo @$user_data_edit->email; ?>">
+        <?php echo form_error('email'); ?>
     </div>
     <div class=" form-group">
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd" name="password">
+        <?php echo form_error('password'); ?>
     </div>
     <div class=" form-group">
         <label for="text">Messages:</label>
