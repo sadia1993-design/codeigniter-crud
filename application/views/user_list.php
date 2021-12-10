@@ -9,23 +9,23 @@
     }
     ?>
     <div class="form-group">
-        <label for="username">Username</label>
+        <label for="username">Username <span style="color:red;font-weight:bold">*</span></label>
         <input type="text" class="form-control" id="username" name="username" value="<?php echo @$user_data_edit->username; ?>">
         <?php echo form_error('username'); ?>
     </div>
     <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email" name="email" value="<?php echo @$user_data_edit->email; ?>"  >
+        <label for="email">Email address <span style="color:red;font-weight:bold">*</span></label>
+        <input type="email" class="form-control" id="email" name="email" value="<?php echo @$user_data_edit->email; ?>">
         <?php echo form_error('email'); ?>
     </div>
     <div class=" form-group">
-        <label for="pwd">Password:</label>
+        <label for="pwd">Password <span style="color:red;font-weight:bold">*</span></label>
         <input type="password" class="form-control" id="pwd" name="password">
         <?php echo form_error('password'); ?>
     </div>
     <div class=" form-group">
-        <label for="text">Messages:</label>
-        <textarea id="editor" name="text" ><?php echo @$user_data_edit->text; ?></textarea>
+        <label for="text">Messages <span style="color:red;font-weight:bold">*</span></label>
+        <textarea id="editor" name="text"><?php echo @$user_data_edit->text; ?></textarea>
         <?php echo form_error('text'); ?>
     </div>
 
