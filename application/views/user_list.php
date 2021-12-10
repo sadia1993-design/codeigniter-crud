@@ -35,7 +35,7 @@
         CKEDITOR.replace('editor');
     </script>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-block btn-primary">Save</button>
 </div>
 <div class="col-md-8">
 
