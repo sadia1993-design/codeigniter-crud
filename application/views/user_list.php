@@ -10,12 +10,12 @@
     ?>
     <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" value="<?php echo @$user_data_edit->username; ?>" placeholder="<?php echo set_value('username'); ?>">
+        <input type="text" class="form-control" id="username" name="username" value="<?php echo @$user_data_edit->username; ?>">
         <?php echo form_error('username'); ?>
     </div>
     <div class="form-group">
         <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email" name="email" value="<?php echo @$user_data_edit->email; ?>" placeholder="<?php echo set_value('email'); ?>">
+        <input type="email" class="form-control" id="email" name="email" value="<?php echo @$user_data_edit->email; ?>"  >
         <?php echo form_error('email'); ?>
     </div>
     <div class=" form-group">
@@ -25,7 +25,7 @@
     </div>
     <div class=" form-group">
         <label for="text">Messages:</label>
-        <textarea id="editor" name="text" placeholder="<?php echo set_value('text'); ?>"><?php echo @$user_data_edit->text; ?></textarea>
+        <textarea id="editor" name="text" ><?php echo @$user_data_edit->text; ?></textarea>
         <?php echo form_error('text'); ?>
     </div>
 

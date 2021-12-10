@@ -18,8 +18,9 @@ class User_list extends CI_Controller
 
     public function saveUser()
     {
-         $this->form_validation->set_rules('username', 'Username', 'trim|required');
-         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]');
+        
+         $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|alpha_numeric'  );
+         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]', array('is_unique' => 'This %s already exists.', 'required' => 'You have not provided %s.') );
          $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[12]');
          $this->form_validation->set_rules('text', 'Text', 'trim|required');
 
@@ -45,7 +46,8 @@ class User_list extends CI_Controller
                 'password' => $password,
                 'text' => $text
             );
-            
+
+
             if (isset($all['id'])) {
                 $this->User_list_model->update_user($all, $all['id']);
             } else {
@@ -57,6 +59,7 @@ class User_list extends CI_Controller
          }
     }
 
+    
 
     public function delete_user($id)
     {
