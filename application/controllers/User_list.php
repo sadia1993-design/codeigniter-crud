@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class User_list extends CI_Controller
-{
+{    
     public function index($id=NULL)
     {
         if(isset($id)){
@@ -20,7 +20,7 @@ class User_list extends CI_Controller
     {
          $this->form_validation->set_rules('username', 'Username', 'trim|required');
          $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]');
-         $this->form_validation->set_rules('password', 'Password', 'trim|required');
+         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[12]');
          $this->form_validation->set_rules('text', 'Text', 'trim|required');
 
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -35,7 +35,17 @@ class User_list extends CI_Controller
          
          else {
 
-            $all  = $this->input->post();
+            $username = $this->input->post('username');
+            $email = $this->input->post('email');
+            $password = md5($this->input->post('password'));
+            $text = $this->input->post('text');
+            $all =array(
+                'username' => $username,
+                'email' => $email,
+                'password' => $password,
+                'text' => $text
+            );
+            
             if (isset($all['id'])) {
                 $this->User_list_model->update_user($all, $all['id']);
             } else {
