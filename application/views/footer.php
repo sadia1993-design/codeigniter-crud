@@ -16,8 +16,14 @@
         });
 
         const newId = document.getElementById('new').innerHTML;
-        $('#add_row').on('click', function() {
+        $('#add_row').on('click', function(e) {
+            e.preventDefault();
             $('#new').append(newId);
+        })
+
+        $('#row_close').on('click', function(event) {
+            event.preventDefault();
+            $(this).closest('tr').remove();
         })
     });
 </script>

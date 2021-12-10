@@ -12,7 +12,7 @@
                 <tbody id="new">
                     <tr>
                         <td><input type="text" style="width: 100%;" class="form-control " id="category" name="category[]"></td>
-                        <td><button type="submit" class="btn  btn-danger new-row"><i class="fa fa-window-close"></i></button></td>
+                        <td><button type="submit" class="btn  btn-danger " id="row_close"><i class="fa fa-window-close"></i></button></td>
                     </tr>
                 </tbody>
             </table>
