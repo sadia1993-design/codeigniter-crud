@@ -56,6 +56,7 @@ class User_list extends CI_Controller
     public function delete_user($id)
     {
         $this->User_list_model->delete_user($id);
+        $this->session->set_flashdata('warning', 'User Deleted Successfully');
         redirect('User_list');
     }
 }
