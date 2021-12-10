@@ -36,22 +36,14 @@ class User_list extends CI_Controller
          
          else {
 
-            $username = $this->input->post('username');
-            $email = $this->input->post('email');
-            $password = md5($this->input->post('password'));
-            $text = $this->input->post('text');
-            $all =array(
-                'username' => $username,
-                'email' => $email,
-                'password' => $password,
-                'text' => $text
-            );
-
+            $all = $this->input->post();
 
             if (isset($all['id'])) {
                 $this->User_list_model->update_user($all, $all['id']);
+                $this->session->set_flashdata('success', 'User Updated Successfully');
             } else {
                 $this->User_list_model->save_user($all);
+                $this->session->set_flashdata('success', 'User Added Successfully');
             }
 
             redirect('User_list');
