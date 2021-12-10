@@ -14,5 +14,10 @@
                 [5, 10, 20, 'Todos']
             ]
         });
+
+        const newId = document.getElementById('new').innerHTML;
+        $('#add_row').on('click', function() {
+            $('#new').append(newId);
+        })
     });
 </script>
