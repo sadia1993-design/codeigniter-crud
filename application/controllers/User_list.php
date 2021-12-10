@@ -21,6 +21,7 @@ class User_list extends CI_Controller
          $this->form_validation->set_rules('username', 'Username', 'trim|required');
          $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[user.email]');
          $this->form_validation->set_rules('password', 'Password', 'trim|required');
+         $this->form_validation->set_rules('text', 'Text', 'trim|required');
 
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
