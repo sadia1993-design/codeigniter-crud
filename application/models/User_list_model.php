@@ -8,8 +8,8 @@ class User_list_model extends CI_Model
     public function get_user()
     {
         return $this->db->select('*')->from('user')->get()->result();
+        
     }
-
     public function save_user($data)
     {
         $this->db->insert('user', $data);

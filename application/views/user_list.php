@@ -36,7 +36,11 @@
     </script>
 
     <button type="submit" class="btn btn-block btn-primary">Save</button>
+    <?php echo form_close(); ?>
 </div>
+
+
+
 <div class="col-md-8">
 
     <h2 class="bg-primary rounded text-white pt-2 pb-2 pl-4">User Lists</h2> <br>
@@ -73,7 +77,7 @@
     <hr>
 
     <br>
-    
+
     <?php
     if ($this->session->flashdata('success')) { ?>
         <div class="alert alert-success alert-dismissible fade show" role="alert">

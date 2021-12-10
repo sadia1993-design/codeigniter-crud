@@ -59,4 +59,5 @@ class User_list extends CI_Controller
         $this->session->set_flashdata('warning', 'User Deleted Successfully');
         redirect('User_list');
     }
+
 }
