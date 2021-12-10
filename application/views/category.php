@@ -8,11 +8,13 @@
     <div class="form-group">
         <label for="username">Category <span style="color:red;font-weight:bold">*</span></label>
         <div class="form-group ">
-            <table style="width: 100%;" id="new">
-                <tr>
-                    <td><input type="text" style="width: 100%;" class="form-control " id="category" name="category[]"></td>
-                    <td><button type="submit" class="btn  btn-danger new-row"><i class="fa fa-window-close"></i></button></td>
-                </tr>
+            <table style="width: 100%;">
+                <tbody id="new">
+                    <tr>
+                        <td><input type="text" style="width: 100%;" class="form-control " id="category" name="category[]"></td>
+                        <td><button type="submit" class="btn  btn-danger new-row"><i class="fa fa-window-close"></i></button></td>
+                    </tr>
+                </tbody>
             </table>
 
 
