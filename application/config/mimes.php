@@ -17,6 +17,7 @@ return array(
 	'dms'	=>	'application/octet-stream',
 	'lha'	=>	'application/octet-stream',
 	'lzh'	=>	'application/octet-stream',
+	'webp'	=>	'image/webp',
 	'exe'	=>	array('application/octet-stream', 'application/x-msdownload'),
 	'class'	=>	'application/octet-stream',
 	'psd'	=>	array('application/x-photoshop', 'image/vnd.adobe.photoshop'),
