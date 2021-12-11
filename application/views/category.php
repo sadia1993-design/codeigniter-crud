@@ -11,8 +11,7 @@
             <table style="width: 100%;">
                 <tbody id="new">
                     <tr>
-                        <td><input type="text" style="width: 100%;" class="form-control " id="category" name="category[]"></td>
-                        <td><button type="submit" class="btn  btn-danger " id="row_close"><i class="fa fa-window-close"></i></button></td>
+                        <td><input type="text"  class="form-control " id="category" name="category[]"></td>
                     </tr>
                 </tbody>
             </table>
